@@ -1,0 +1,7 @@
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\bin\Debug\SortingAlgorithms.exe.config
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\bin\Debug\SortingAlgorithms.exe
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\bin\Debug\SortingAlgorithms.pdb
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.csprojAssemblyReference.cache
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.exe
+C:\Users\alin2\source\repos\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.pdb
