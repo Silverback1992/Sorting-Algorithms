@@ -24,7 +24,7 @@ namespace SortingAlgorithms
                     position -= 1;
                 }
 
-                myArray[i] = currentValue;
+                myArray[position] = currentValue;
             }
 
             PrintSortingResultToTXTFunction(myArray, "InsertionSort");

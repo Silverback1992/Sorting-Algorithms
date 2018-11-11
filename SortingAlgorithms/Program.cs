@@ -15,29 +15,6 @@ namespace SortingAlgorithms
             int[] myArray = ArrayGenerator();
             int[] myTempArray = new int[myArray.Length];
             Array.Copy(myArray, myTempArray, myArray.Length);
-            /*
-            myArray[0] = 1000000;
-            //myArray = myTempArray;
-
-            Console.WriteLine("myArray:");
-            Console.WriteLine();
-
-            foreach(int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
-
-            Console.WriteLine("myTempArray:");
-            Console.WriteLine();
-
-            foreach (int element in myTempArray)
-            {
-                Console.WriteLine(element);
-            }
-
-            Console.ReadKey();
-            //myArray.CopyTo(myTempArray, 0);
-            */
 
             //Print the unsorted list to the console so it can be checked
 
@@ -51,103 +28,76 @@ namespace SortingAlgorithms
             //Calling different sorting algorithms on the list and putting the results into TXTs
 
             BubbleSort.BubbleSortAlgorithm(myArray);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Before Check1:");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("Check1");
-            myArray = myTempArray;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("myArray:");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             SelectionSort.SelectionSortAlgorithm(myArray);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Check2");
-            foreach(int element in myTempArray)
-            {
-                Console.WriteLine(element);
-            }
-            myArray = myTempArray;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("myArray:");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
-            Console.ReadKey();
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             //MergeSort.MergeSortAlgorithm(myArray);
+            myTempArray.CopyTo(myArray, 0);
+
             InsertionSort.InsertionSortAlgorithm(myArray);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Check3");
-            myArray = myTempArray;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("myArray:");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             BucketSort.BucketSortAlgorithm(myArray);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Check4");
-            myArray = myTempArray;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("myArray:");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             QuickSort.QuickSortAlgorithm(myArray);
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Check5");
-            myArray = myTempArray;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("myArray:");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
-            Console.ReadKey();
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             GnomeSort.GnomeSortAlgorithm(myArray);
-            Console.WriteLine("check6");
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             CombSort.CombSortAlgorithm(myArray);
-            Console.WriteLine("check7");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("CheckSOKADIK");
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
-            myArray = myTempArray;
-            Console.WriteLine();
-            Console.WriteLine();
-            foreach (int element in myArray)
-            {
-                Console.WriteLine(element);
-            }
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             CountingSort.CountingSortAlgorithm(myArray);
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             HeapSort.HeapSortAlgorithm(myArray);
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             //CycleSort.CycleSortAlgorithm(myArray);
-            BogoSort.BogoSortAlgorithm(myArray);
+            myTempArray.CopyTo(myArray, 0);
+
+            //BogoSort.BogoSortAlgorithm(myArray);
+            myTempArray.CopyTo(myArray, 0);
+
             CocktailSort.CocktailSortAlgorithm(myArray);
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             StoogeSort.StoogeSortAlgorithm(new int[] { 2, 4, 5, 3, 1 });
+            myTempArray.CopyTo(myArray, 0);
+
             OddEvenSort.OddEvenSortAlgorithm(myArray);
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
+
             BubbleSortRecursive.BubblesortRecursiveAlgorithm(myArray);
+            CheckIfArrayRandomOrSorted(myArray);
+            myTempArray.CopyTo(myArray, 0);
+            CheckIfArrayRandomOrSorted(myArray);
 
             //
 
@@ -184,6 +134,26 @@ namespace SortingAlgorithms
             }
 
             return myArray;
+        }
+
+        private static void CheckIfArrayRandomOrSorted(int[] myArray)
+        {
+            bool isRandom = false;
+
+            for(int i = 0; i < myArray.Length - 1; i++)
+            {
+                if(myArray[i] > myArray[i+1])
+                {
+                    isRandom = true;
+                    Console.WriteLine("The array values are random.");
+                    break;
+                }
+            }
+
+            if(!isRandom)
+            {
+                Console.WriteLine("The array is sorted.");
+            }
         }
     }
 }

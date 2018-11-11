@@ -60,7 +60,7 @@ namespace SortingAlgorithms
                     position = position - 1;
                 }
 
-                myArray[i] = currentValue;
+                myArray[position] = currentValue;
             }
 
             return myArray;
