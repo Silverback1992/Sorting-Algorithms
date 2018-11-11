@@ -31,12 +31,5 @@ namespace SortingAlgorithms
                 StoogeSortRecursive(ref myArray, start, end - oneThird);
             }
         }
-
-        private static void Swap(ref int a, ref int b)
-        {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
     }
 }

@@ -11,7 +11,6 @@ namespace SortingAlgorithms
         public static void SelectionSortAlgorithm(int[] myArray)
         {
             int indexOfMin;
-            int temp;
 
             for(int i = 0; i < myArray.Length; i++)
             {
@@ -27,9 +26,7 @@ namespace SortingAlgorithms
 
                 if(i != indexOfMin)
                 {
-                    temp = myArray[indexOfMin];
-                    myArray[indexOfMin] = myArray[i];
-                    myArray[i] = myArray[indexOfMin];
+                    Swap(ref myArray[indexOfMin], ref myArray[i]);
                 }
             }
 

@@ -46,12 +46,5 @@ namespace SortingAlgorithms
                 Heapify(myArray, arrayLength, largestNodeIndex);
             }
         }
-
-        private static void Swap(ref int a, ref int b)
-        {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
     }
 }

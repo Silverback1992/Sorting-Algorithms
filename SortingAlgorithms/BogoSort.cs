@@ -42,12 +42,5 @@ namespace SortingAlgorithms
                 Swap(ref myArray[i], ref myArray[myRandom.Next(0, myArray.Length)]);
             }
         }
-
-        private static void Swap(ref int a, ref int b)
-        {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
     }
 }
