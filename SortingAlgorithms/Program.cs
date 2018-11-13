@@ -25,55 +25,42 @@ namespace SortingAlgorithms
                 Console.WriteLine(element);
             }
 
+            Console.WriteLine();
+
             //Calling different sorting algorithms on the list and putting the results into TXTs
 
+            Console.WriteLine("Check on a no-duplicates array:");
+            Console.WriteLine();
+
             BubbleSort.BubbleSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             SelectionSort.SelectionSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             //MergeSort.MergeSortAlgorithm(myArray);
             myTempArray.CopyTo(myArray, 0);
 
             InsertionSort.InsertionSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             BucketSort.BucketSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             QuickSort.QuickSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             GnomeSort.GnomeSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             CombSort.CombSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             CountingSort.CountingSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             HeapSort.HeapSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             //CycleSort.CycleSortAlgorithm(myArray);
             myTempArray.CopyTo(myArray, 0);
@@ -82,22 +69,16 @@ namespace SortingAlgorithms
             myTempArray.CopyTo(myArray, 0);
 
             CocktailSort.CocktailSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             StoogeSort.StoogeSortAlgorithm(new int[] { 2, 4, 5, 3, 1 });
             myTempArray.CopyTo(myArray, 0);
 
             OddEvenSort.OddEvenSortAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             BubbleSortRecursive.BubblesortRecursiveAlgorithm(myArray);
-            CheckIfArrayRandomOrSorted(myArray);
             myTempArray.CopyTo(myArray, 0);
-            CheckIfArrayRandomOrSorted(myArray);
 
             //
 
@@ -134,26 +115,6 @@ namespace SortingAlgorithms
             }
 
             return myArray;
-        }
-
-        private static void CheckIfArrayRandomOrSorted(int[] myArray)
-        {
-            bool isRandom = false;
-
-            for(int i = 0; i < myArray.Length - 1; i++)
-            {
-                if(myArray[i] > myArray[i+1])
-                {
-                    isRandom = true;
-                    Console.WriteLine("The array values are random.");
-                    break;
-                }
-            }
-
-            if(!isRandom)
-            {
-                Console.WriteLine("The array is sorted.");
-            }
         }
     }
 }
