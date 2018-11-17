@@ -63,6 +63,7 @@
     <Compile Include="SelectionSort.cs" />
     <Compile Include="ShellSort.cs" />
     <Compile Include="StoogeSort.cs" />
+    <Compile Include="StrandSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

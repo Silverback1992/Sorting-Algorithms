@@ -14,7 +14,7 @@ namespace SortingAlgorithms
 
             while(counter < myArray.Length)
             {
-                if(counter == 0 || myArray[counter] > myArray[counter-1])
+                if(counter == 0 || myArray[counter] >= myArray[counter-1])
                 {
                     counter++;
                 }else

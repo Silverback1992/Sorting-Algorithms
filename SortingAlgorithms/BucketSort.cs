@@ -21,11 +21,7 @@ namespace SortingAlgorithms
 
             for(int i = 0; i < myArray.Length; i++)
             {
-                bucketID = myArray[i] / 100;
-
-                if (bucketID == 10)
-                    bucketID = 9;
-
+                bucketID = myArray[i] / 5;
                 buckets[bucketID].Add(myArray[i]);
             }
 

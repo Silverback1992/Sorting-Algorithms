@@ -29,7 +29,7 @@ namespace SortingAlgorithms
 
             //Calling different sorting algorithms on the list and putting the results into TXTs
 
-            Console.WriteLine("Check on a no-duplicates array:");
+            Console.WriteLine("Check on array that has duplicates:");
             Console.WriteLine();
 
             BubbleSort.BubbleSortAlgorithm(myArray);
@@ -80,6 +80,15 @@ namespace SortingAlgorithms
             BubbleSortRecursive.BubblesortRecursiveAlgorithm(myArray);
             myTempArray.CopyTo(myArray, 0);
 
+            //InsertionSortRecursive.InsertionSortRecursiveAlgorithm(myArray);
+            myTempArray.CopyTo(myArray, 0);
+
+            //ShellSort.ShellSortAlgorithm(myArray);
+            myTempArray.CopyTo(myArray, 0);
+
+            StrandSort.StrandSortAlgorithm(new int[]{ 3,5,5,1,5,3,10,8,9});
+            myTempArray.CopyTo(myArray, 0);
+
             //
 
             Console.ReadKey();
@@ -89,29 +98,10 @@ namespace SortingAlgorithms
         {
             int[] myArray = new int[100];
             Random rand = new Random();
-            bool isItUnique = true;
 
             for(int i = 0; i < 100; i++)
             {
-                myArray[i] = rand.Next(1, 1001);
-
-                while (!isItUnique)
-                {
-                    for (int j = 0; j < i; j++)
-                    {
-                        if(myArray[i] == myArray[j])
-                        {
-                            isItUnique = false;
-                            myArray[i] = rand.Next(1, 1001);
-                            break;
-                        }else
-                        {
-                            isItUnique = true;
-                        }
-                    }
-                }
-
-                isItUnique = false;
+                myArray[i] = rand.Next(1, 50);
             }
 
             return myArray;
